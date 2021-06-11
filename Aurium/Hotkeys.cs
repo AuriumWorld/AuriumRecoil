@@ -91,10 +91,10 @@ namespace Aurium
                 RegisterHotKey(Keys.NumPad7, KeyModifiers.Control); // M39
                 RegisterHotKey(Keys.NumPad8, KeyModifiers.Control); // M92
                 RegisterHotKey(Keys.NumPad9, KeyModifiers.Control); // M249
-                RegisterHotKey(Keys.Left, KeyModifiers.Control); // Randomness Down
-                RegisterHotKey(Keys.Right, KeyModifiers.Control); // Randomness Up
-                RegisterHotKey(Keys.Up, KeyModifiers.Control); // Sensitivty Up
-                RegisterHotKey(Keys.Down, KeyModifiers.Control); // Sensitivity Down
+                RegisterHotKey(Keys.Left, KeyModifiers.Control); // Sensitivity Down
+                RegisterHotKey(Keys.Right, KeyModifiers.Control); // Sensitivity Up
+                RegisterHotKey(Keys.Up, KeyModifiers.Control); // Randomness Up
+                RegisterHotKey(Keys.Down, KeyModifiers.Control); // Randomness Down
                 RegisterHotKey(Keys.Add, KeyModifiers.Control); // Scopes
                 RegisterHotKey(Keys.Enter, KeyModifiers.Control); // Barrels
                 HotKeyPressed += new EventHandler<HotKeyEventArgs>(Hotkey.HotKeys_HotKeyPressed);
@@ -141,16 +141,16 @@ namespace Aurium
                     case Keys.NumPad9:
                         Weapons.setVariables(9);
                         break;
-                    case Keys.Left:
+                    case Keys.Down:
                         Variables.Weapon.setRandomness(-1);
                         break;
-                    case Keys.Right:
+                    case Keys.Up:
                         Variables.Weapon.setRandomness(1);
                         break;
-                    case Keys.Up:
+                    case Keys.Right:
                         Variables.Settings.setSensitivity(1);
                         break;
-                    case Keys.Down:
+                    case Keys.Left:
                         Variables.Settings.setSensitivity(-1);
                         break;
                     case Keys.Add:

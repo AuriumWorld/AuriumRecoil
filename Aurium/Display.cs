@@ -6,8 +6,8 @@ namespace Aurium
     {
         private static void InitializeWindow()
         {
-            Console.SetWindowSize(50, 40);
-            Console.SetBufferSize(50, 40);
+            Console.SetWindowSize(50, 30);
+            Console.SetBufferSize(50, 30);
             Console.Title = "Aurium";
             PrintHeader();
         }
@@ -15,13 +15,12 @@ namespace Aurium
         public static void PrintHeader()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine(@"          _              _                 ");
-            Console.WriteLine(@"         / \  _   _ _ __(_)_   _ _ __ ___  ");
-            Console.WriteLine(@"        / _ \| | | | '__| | | | | '_ ` _ \ ");
-            Console.WriteLine(@"       / ___ \ |_| | |  | | |_| | | | | | |");
-            Console.WriteLine(@"      /_/   \_\__,_|_|  |_|\__,_|_| |_| |_|");
-            Console.WriteLine();
-            Console.WriteLine(" -------------------------------------------------");
+            Console.WriteLine(@"           _              _                 ");
+            Console.WriteLine(@"          / \  _   _ _ __(_)_   _ _ __ ___  ");
+            Console.WriteLine(@"         / _ \| | | | '__| | | | | '_ ` _ \ ");
+            Console.WriteLine(@"        / ___ \ |_| | |  | | |_| | | | | | |");
+            Console.WriteLine(@"       /_/   \_\__,_|_|  |_|\__,_|_| |_| |_|");
+            Console.WriteLine("  -----------------------------------------------");
             Console.ResetColor();
             Console.WriteLine("            Sensitivity     Randomness");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -50,24 +49,17 @@ namespace Aurium
             Console.Write(" Muzzle Attachment: ");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Write(Variables.Weapon.getActiveBarrel() + "\n");
-            Console.WriteLine();
-            Console.WriteLine(" -------------------------------------------------");
+            Console.WriteLine("  -----------------------------------------------");
             Console.ResetColor();
             Console.WriteLine(" CTRL + Number Pad:");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
 
             Console.WriteLine();
-            Console.WriteLine(" 0: Enable/Disable");
+            Console.WriteLine("         7: MP5A4   8: Semi    9: Thompson");
+            Console.WriteLine("         4: M39     5: M92     6: M249");
+            Console.WriteLine("         1: AK-47   2: Custom  3: LR-300");
             Console.WriteLine();
-            Console.WriteLine(" 1: Assault Rifle");
-            Console.WriteLine(" 2: Custom SMG");
-            Console.WriteLine(" 3: LR-300 Assault Rifle");
-            Console.WriteLine(" 4: M39");
-            Console.WriteLine(" 5: M92");
-            Console.WriteLine(" 6: M249");
-            Console.WriteLine(" 7: MP5A4");
-            Console.WriteLine(" 8: Semi-Automatic Rifle");
-            Console.WriteLine(" 9: Thompson");
+            Console.WriteLine(" 0: Enable/Disable");
             Console.WriteLine();
             Console.WriteLine(" +: Cycle Sights [None/Simple/Holo/8x/16x]");
             Console.WriteLine(" Enter: Cycle Barrels [None/Silencer/Boost/Break]");
@@ -76,8 +68,8 @@ namespace Aurium
             Console.WriteLine(" CTRL + Arrow Key:");
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine(" Randomness: [← Decrease] [→ Increase]");
-            Console.WriteLine(" In-game Sensitivity: [↓ Decrease] [↑ Increase]");
+            Console.WriteLine(" In-game Sensitivity: [← Decrease] [→ Increase]");
+            Console.WriteLine(" Randomness: [↓ Decrease] [↑ Increase]");
         }
 
         static void Main(string[] args)

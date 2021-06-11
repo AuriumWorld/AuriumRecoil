@@ -150,7 +150,7 @@ namespace Aurium
             }
 
             // RANDOMNESS //
-            private static double Randomness { get; set; } = 5.0;
+            private static double Randomness { get; set; } = 0.0;
             public static void setRandomness(int RandomnessIndex)
             {
                 switch (RandomnessIndex)
